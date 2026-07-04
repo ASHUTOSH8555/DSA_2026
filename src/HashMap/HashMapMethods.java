@@ -1,6 +1,5 @@
 package HashMap;
 
-import java.lang.reflect.Method;
 import java.util.*;
 
 public class HashMapMethods {
@@ -17,10 +16,10 @@ public class HashMapMethods {
         System.out.println(mp.get("Ravi"));// it will return 29
         System.out.println(mp.get("Ashutosh")); //  it will return null as Ashutosh is not present as the key
         // to update the value of the key present in the map.
-        mp.put("Akash", 22); // it will update the value of Akash from 25 → 26
+        mp.put("Akash", 22); // it will update the value of Akash from 25 → 22
         System.out.println(mp.get("Akash")); // it will return 22
         // To remove the key from the map it it exist.
-        System.out.println(mp.remove("Akash")); // it will print the value because if key exists then it return the value of the return key.
+        System.out.println(mp.remove("Akash")); // it will print the value because if key exists, remove() returns its value..
         System.out.println(mp);// it shows that Akash is removed from the HashMap.
         System.out.println(mp.remove("Ashutosh")); // it will return null as Ashutosh is not present in key.
 
