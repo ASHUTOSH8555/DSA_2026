@@ -1,12 +1,13 @@
 package Recursion;
 
+import java.util.Arrays;
+
 public class MergeSort {
     public static void main(String[] args){
         int[] arr = {5,4,2,3,6,7,89,76};
         Sort(arr);
-        for(int ele:arr) {
-            System.out.print(ele + " ");
-        }
+        System.out.println(Arrays.toString(arr));
+
     }
     public static void Sort(int[] arr){
 
