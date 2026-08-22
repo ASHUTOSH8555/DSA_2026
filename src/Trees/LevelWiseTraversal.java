@@ -10,9 +10,17 @@ public class LevelWiseTraversal {
             this.val = val;
         }
     }
+    public static int Height(Node root){
+        if(root == null) return 0;
+        if(root.left == null && root.right==null) return 0;
+        return 1+ Math.max(Height(root.left),Height(root.right));
+    }
     public static void NthLevel(Node root, int n){
         if(root == null) return;
-        if(n==1) System.out.print(root.val+" ");
+        if(n==1) {
+            System.out.print(root.val+" ");
+            return;
+        }
         NthLevel(root.left , n-1);
         NthLevel(root.right, n-1);
     }
@@ -30,6 +38,10 @@ public class LevelWiseTraversal {
         Node f = new Node(7);
         b.left = e;
         b.right = f;
-        NthLevel(root, 3);
+        int Lvl = Height(root)+1;
+        for(int i=1; i<=Lvl; i++){
+            NthLevel(root, i);
+            System.out.println();
+        }
     }
 }
